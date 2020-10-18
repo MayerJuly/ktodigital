@@ -43,9 +43,8 @@ $(function() {
     });
 
     function sliderSlick() {
-        let width = $(document).width()
+        let width = document.documentElement.clientWidth
         if (width < 695) {
-            console.log('UNSLICKED')
             slider.filter('.slick-initialized').slick('unslick');
         } else {
                 slider.not('.slick-initialized').slick({
@@ -71,13 +70,19 @@ $(function() {
         let elementID = $(this).data('scroll')
         let elementOffset = $(elementID).offset().top
 
-        nav.removeClass('show')
+        nav.removeClass('active')
+        $('.ham').removeClass('active')
 
 
-        $('html, body').animate( {
-            scrollTop: elementOffset - 75,
-        },700)
-
+        if (elementID === '#features')
+            $('html, body').animate({
+                scrollTop: elementOffset + 65,
+            }, 700)
+        else {
+            $('html, body').animate({
+                scrollTop: elementOffset - 75,
+            }, 700)
+        }
     })
 
 

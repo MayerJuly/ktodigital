@@ -29,6 +29,8 @@ async function formSend(e) {
             form.classList.remove('_sending')
         } else {
             alert('Ошибка')
+            form.classList.remove('_sending')
+
         }
     } else {
         alert("Заполните обязательные поля")
