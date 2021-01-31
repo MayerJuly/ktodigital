@@ -37,6 +37,13 @@ body {
 
 }
 
+.container {
+    width:100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 /* FORM */
 
 .form{
@@ -306,12 +313,7 @@ a:link{
     text-decoration: none;
 }
 
-.container {
-    width:100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
+
 
 
 /* HEADER */
@@ -704,10 +706,10 @@ nav.active {
 }
 
 .team__title{
-    max-width: 280px;
+    max-width: 300px;
     margin: 0 auto;
     color: #000000;
-    font-size: 60px;
+    font-size: 66px;
 }
 
 .team__wrapper{
@@ -720,19 +722,40 @@ nav.active {
     margin: 90px 0 100px;
     text-transform: uppercase;
     transition: .3s;
+}
+
+.team__wrapper .team__item:nth-child(4){
+    padding-left: 140px;
+}
+.team__wrapper .team__item:nth-child(5){
+    padding-right:140px;
+}
+
+.team__wrapper .team__item:nth-child(4),
+.team__wrapper .team__item:nth-child(5){
+    width:50%;
+}
+
+
+@media(max-width:710px) {
+    .team__wrapper .team__item:nth-child(4),
+    .team__wrapper .team__item:nth-child(5){
+        width:100%;
+        padding:0;
+    }
 
 
 }
 
 .team__item-img {
     width: 100%;
-    max-width:293px;
+    max-width:333px;
     margin: 0 auto;
     position: relative;
 
     transform: translateY(100px);
     opacity:0;
-    transition: all .8s ease .2s;
+    transition: all .7s ease 0s;
 }
 
 ._active .team__item-img {
@@ -761,6 +784,7 @@ nav.active {
 .team-icon{
 
     height: 100%;
+    max-height: 500px;
     margin: 0 auto;
     box-shadow: 0 0 36px 10px rgba(0, 0, 0, 0.4);
     transition: filter .3s;
@@ -776,8 +800,9 @@ nav.active {
     position:absolute;
     z-index: 1;
     color: #fafafa;
-    font-size: 30px;
+    font-size: 35px;
     pointer-events: none;
+    max-width:127px;
 }
 
 .team__item:hover .team__item-img img{
@@ -789,8 +814,8 @@ nav.active {
 
 /*  TEAM CARD'S TITLES*/
 .team__item-title.alex{
-    top: 12px;
-   right: 20px;
+    top: 22px;
+   left: 25px;
 }
 
 .team__item-title.greg{
@@ -802,7 +827,6 @@ nav.active {
     max-width: 145px;
     bottom: 10px;
     left: 10px;
-    color:#000;
 }
 
 .team__item-title.nikolay{
@@ -814,15 +838,14 @@ nav.active {
     max-width:127px;
     top: 26px;
     right: 9px;
-    color:#000;
 }
 .team__item-title.andry {
-    bottom: 29px;
+    bottom: 59px;
     left: 16px;
 }
 
 .team__item:hover .team__item-title.andry{
-    transform:translateY(-35px);
+    transform:translateY(-95px);
 }
 .team__item:hover .team__item-title.rust {
     transform:translateY(-45px);
@@ -1000,7 +1023,7 @@ footer .icon__item{
 
     .team__item-img{
         width:100%;
-        max-width: 293px;
+        max-width: 333px;
         margin: 0 auto;
         padding: 0;
     }
@@ -1067,6 +1090,12 @@ footer .icon__item{
 
 }
 
+@media(max-width:715px) {
+    .team__item {
+        width: 100%;
+    }
+}
+
 @media(max-width:694px) {
 
     .slider__mobile{
@@ -1085,9 +1114,7 @@ footer .icon__item{
         margin: 0 auto;
     }
 
-    .team__item {
-        width: 100%;
-    }
+
 
 }
 
