@@ -141,6 +141,8 @@ $(function() {
 
     burger.on('click', function () {
         nav.toggleClass('active')
+        $('.body').toggleClass('scroll-hidden')
+
         })
 
 
